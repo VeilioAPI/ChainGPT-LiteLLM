@@ -8,14 +8,14 @@ Note: Please create your own copy of this Google Doc by selecting File → “Ma
 
 ## **Applicant Information**
 
-* Project Name: **Veilio Exposure** (+ open-source **[ChainGPT-LiteLLM](https://github.com/VeilioAPI/ChainGPT-LiteLLM)** bridge)  
+* Project Name: **Veilio** (+ open-source **[ChainGPT-LiteLLM](https://github.com/VeilioAPI/ChainGPT-LiteLLM)** bridge)  
 * Project Website: https://veilio.xyz · Deep / Exposure staging: https://staging.exposure.veilio.xyz  
 * Project Docs:  
   - Technical proposal: `docs/CHAINGPT-LITELLM-ADAPTER.md` (in Exposure repo)  
   - OSS specs: https://github.com/VeilioAPI/ChainGPT-LiteLLM/blob/develop/SPECS.md  
   - Product Deep/Strix: `docs/EXP-DEEP-SCAN-STRIX.md`  
-* Github / HuggingFace: https://github.com/VeilioAPI/Exposure (public product) · https://github.com/VeilioAPI/ChainGPT-LiteLLM (OSS adapter, Apache-2.0, default branch `develop`)  
-* Primary Contact (Name, Email): **[Quentin — fill email]**  
+* Github / HuggingFace: https://github.com/VeilioAPI/Exposure (public product) · https://github.com/VeilioAPI/ChainGPT-LiteLLM (OSS adapter, Apache-2.0)  
+* Primary Contact (Name, Email): **Quentin CLEMENT, CEO, quentin@veilio.xyz**  
 * Application Date: **August 28, 2026**
 
 ---
@@ -34,7 +34,7 @@ Note: Please create your own copy of this Google Doc by selecting File → “Ma
 
 * What stage is your project currently in? (Idea, Prototype, MVP, Production)  
 
-  Answer: **MVP / early production.** Free OSINT Exposure is live on staging/production paths; Deep funnel (verify → pay/mock → report) is implemented; Strix is installed and smoke-tested. The ChainGPT adapter is **public on GitHub** ([ChainGPT-LiteLLM](https://github.com/VeilioAPI/ChainGPT-LiteLLM), v0 scaffold: proxy routes, mapping tests, Docker, examples). This grant funds live upstream validation, agent/Strix proof, Exposure Deep wiring, and co-marketing.
+  Answer: **MVP / early production.** Free OSINT Exposure is live on staging/production paths; Deep funnel (verify → pay/mock → report) is implemented; Strix is installed and smoke-tested. The ChainGPT adapter is **public on GitHub** ([ChainGPT-LiteLLM](https://github.com/VeilioAPI/ChainGPT-LiteLLM), v0 scaffold: proxy routes, mapping tests, Docker, examples). 
 
 * Please provide the current Daily Active Users (DAUs) and Monthly Active Users (MAUs) for your entire product or ecosystem.  
 
@@ -45,7 +45,7 @@ Note: Please create your own copy of this Google Doc by selecting File → “Ma
   Answer:  
 
   **Integration surface:** Exposure Deep worker + report enrichment + OSS adapter consumers.  
-  **Current Exposure staging:** low hundreds of experimental scans/month during build-out (OSINT free path + Deep mock). Post-grant target (6 months): thousands of free OSINT reports/month and a growing share of Deep jobs on ChainGPT credits. Exact public analytics can be shared under NDA if useful for co-marketing KPIs.
+  **Current Exposure staging:** low hundreds of experimental scans/month during build-out (OSINT free path + Deep mock). Post-grant target (6 months): thousands of free OSINT reports/month and a growing share of Deep jobs on ChainGPT credits. 
 
 ---
 
