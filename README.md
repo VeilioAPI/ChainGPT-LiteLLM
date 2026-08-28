@@ -86,6 +86,9 @@ See [`examples/`](./examples/).
 
 ## Related
 
+- [Grant application (Veilio, Aug 2026)](./docs/grant-application-veilio-2026-08-28.md)
+- [Technical proposal / adapter doc](./docs/CHAINGPT-LITELLM-ADAPTER.md)
+- [Functional & technical specs](./SPECS.md)
 - [ChainGPT Web3 LLM docs](https://docs.chaingpt.org/dev-docs-b2b-saas-api-and-sdk/web3-ai-chatbot-and-llm-api-and-sdk)
 - [ChainGPT Web3 AI Grant](https://www.chaingpt.org/web3-ai-grant)
 
