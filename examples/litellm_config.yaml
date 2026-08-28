@@ -1,0 +1,9 @@
+# LiteLLM example: route openai/* to this proxy
+# litellm --config examples/litellm_config.yaml
+
+model_list:
+  - model_name: general_assistant
+    litellm_params:
+      model: openai/general_assistant
+      api_base: http://127.0.0.1:8787/v1
+      api_key: local
