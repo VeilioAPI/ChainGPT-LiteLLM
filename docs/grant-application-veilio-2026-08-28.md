@@ -11,10 +11,9 @@ Note: Please create your own copy of this Google Doc by selecting File → “Ma
 * Project Name: **Veilio Exposure** (+ open-source **[ChainGPT-LiteLLM](https://github.com/VeilioAPI/ChainGPT-LiteLLM)** bridge)  
 * Project Website: https://veilio.xyz · Deep / Exposure staging: https://staging.exposure.veilio.xyz  
 * Project Docs:  
-  - Grant application (this doc): https://github.com/VeilioAPI/ChainGPT-LiteLLM/blob/develop/docs/grant-application-veilio-2026-08-28.md  
-  - Technical proposal: https://github.com/VeilioAPI/ChainGPT-LiteLLM/blob/develop/docs/CHAINGPT-LITELLM-ADAPTER.md  
+  - Technical proposal: `docs/CHAINGPT-LITELLM-ADAPTER.md` (in Exposure repo)  
   - OSS specs: https://github.com/VeilioAPI/ChainGPT-LiteLLM/blob/develop/SPECS.md  
-  - Product Deep/Strix: https://github.com/VeilioAPI/Exposure/blob/develop/docs/EXP-DEEP-SCAN-STRIX.md  
+  - Product Deep/Strix: `docs/EXP-DEEP-SCAN-STRIX.md`  
 * Github / HuggingFace: https://github.com/VeilioAPI/Exposure (public product) · https://github.com/VeilioAPI/ChainGPT-LiteLLM (OSS adapter, Apache-2.0, default branch `develop`)  
 * Primary Contact (Name, Email): **[Quentin — fill email]**  
 * Application Date: **August 28, 2026**
@@ -129,14 +128,14 @@ Example buyer: launchpad pre-TGE checklist, protocol security startup, wallet/br
 
 ## **Grant Request**
 
-* Requested API Credits Amount (up to $20,000): **$20,000**  
-* Requested Cash Grant Amount (up to $10,000): **$5,000** (optional / stretch — primarily for OSS packaging, docs, demos; we prioritize **API credits + co-marketing**)
+* Requested API Credits Amount (up to $20,000): **$15,000**  
+* Requested Cash Grant Amount (up to $10,000): 0
 
 Briefly justify your budget request. (Explain how the requested API credits and/or cash grant amounts align with the activities described in your milestones).  
 
 Answer:  
 
-**API credits ($20,000) — primary ask**
+**API credits ($15,000) — primary ask**
 
 | Activity | Why credits | Rough use |
 |----------|-------------|-----------|
@@ -148,9 +147,6 @@ Answer:
 | Buffer | Rate-limit retries, eval harness A/B, partner workshop | Continuity |
 
 Without credits, we cannot prove agent economics or run co-marketing demos. Gemini free-tier already failed mid-scan (quota ~20 req/day). ChainGPT credits are the intended production fuel for Exposure Deep and for **other builders** cloning the OSS proxy.
-
-**Cash ($5,000) — secondary**  
-Engineering time to harden OSS (tests, Docker image, LiteLLM plugin PR, English docs, security review of logging/PII). If cash is reserved for larger brands only, we accept **credits-only** and still deliver OSS + Exposure integration + co-marketing assets.
 
 **Co-marketing (explicit ask, non-cash)**  
 Joint announcement, case study, newsletter/X feature, docs listing of the adapter, intro to builder community. See Value section.
@@ -166,8 +162,6 @@ Joint announcement, case study, newsletter/X feature, docs listing of the adapte
 | **3 — Exposure Deep on ChainGPT** | **+12–14 weeks** | Staging Exposure Deep worker env wired to adapter; report enrichment (OSINT→CTO summary) live; health endpoint shows ChainGPT path; optional Smart Contract Auditor section for Web3 demo target; short Loom walkthrough for co-marketing. |
 | **4 — Ecosystem pack + co-marketing** | **+14–16 weeks** | Case study draft (problem → adapter → Exposure Deep); architecture diagram; blog-ready technical post; PR or plugin path toward LiteLLM listing; workshop notes / FAQ for builders; metrics: credits burned, Deep jobs on ChainGPT, GitHub stars/forks, inbound builder questions. |
 
-Milestone payments / credit unlocks can be staged (e.g. 25% credits at M1, 25% M2, 30% M3, 20% M4) at ChainGPT’s discretion.
-
 ---
 
 ## **Value to ChainGPT**
@@ -180,7 +174,7 @@ Answer:
 
 - **Direct:** Every Exposure Deep job + enrichment call burns `general_assistant` (and Auditor when Web3).  
 - **Indirect (larger):** The OSS proxy turns **any** LiteLLM/OpenAI-SDK product into a ChainGPT customer without a custom integration project. Target segments: security agents, ASM/GRC report tools, DeFi AppSec platforms, CI platforms, education/IDE bots.  
-- **Estimate (12 months, directional):**  
+- **Estimate (18 months, directional):**  
   - Exposure: hundreds → low thousands of Deep/enrichment calls/month as funnel scales  
   - OSS clones: even **50–200 external deployments** each running canaries + light chat can exceed Exposure-only burn  
   - We will report monthly: credits used, adapter GitHub traffic, known downstream adopters  
@@ -224,10 +218,9 @@ We will file concrete feedback from real agent traffic: latency, streaming edge 
 
 Enhance your application by providing supporting materials:
 
-* **Grant application (this doc):** https://github.com/VeilioAPI/ChainGPT-LiteLLM/blob/develop/docs/grant-application-veilio-2026-08-28.md  
-* **Technical proposal (detailed):** https://github.com/VeilioAPI/ChainGPT-LiteLLM/blob/develop/docs/CHAINGPT-LITELLM-ADAPTER.md  
-* **OSS repo (public):** https://github.com/VeilioAPI/ChainGPT-LiteLLM · specs: https://github.com/VeilioAPI/ChainGPT-LiteLLM/blob/develop/SPECS.md · examples: `examples/`  
-* **Product Deep spec:** https://github.com/VeilioAPI/Exposure/blob/develop/docs/EXP-DEEP-SCAN-STRIX.md  
+* **Technical proposal (detailed):** Veilio Exposure repo → `docs/CHAINGPT-LITELLM-ADAPTER.md` (objectives, market use cases, architecture, mapping, risks, open questions).  
+* **OSS repo (public):** https://github.com/VeilioAPI/ChainGPT-LiteLLM · specs: `SPECS.md` · examples: `examples/`  
+* **Product Deep spec:** `docs/EXP-DEEP-SCAN-STRIX.md`  
 * **Live product:** https://staging.exposure.veilio.xyz (OSINT + Deep funnel) · https://veilio.xyz  
 * **Architecture (summary):**
 
@@ -258,8 +251,7 @@ We self-assess against ChainGPT’s criteria as:
 - **Yes — Innovative / Open-Source:** We build a **unique, reusable OpenAI/LiteLLM bridge** that ChainGPT is not shipping itself, plus a real security product (Exposure OSINT → Deep) as reference customer. This is the category that qualifies for **substantial API credits** and, where appropriate, cash.  
 - **Documentation / product feedback:** Agent-loop learnings fed back to ChainGPT eng/docs.
 
-**Primary request:** **$20,000 API credits** + **co-marketing**.  
-**Secondary:** **$5,000 cash** for OSS hardening if aligned with program norms.
+**Primary request:** **$15,000 API credits** + **co-marketing**.  
 
 ## **Co-Marketing Expectations Match:**
 
@@ -273,16 +265,3 @@ Pre-TGE / Pad paths are optional follow-ons; this grant stands on **API integrat
 
 ---
 
-**Thank you for applying to the ChainGPT Grant Program!**
-
-We appreciate your commitment to innovation and are excited to review your project. If you have any questions or need assistance during the review process, feel free to reach out anytime.
-
----
-
-### **Internal checklist before sending**
-
-- [ ] Fill Primary Contact name + email  
-- [x] Confirm GitHub org for OSS repo name → https://github.com/VeilioAPI/ChainGPT-LiteLLM  
-- [x] Grant + adapter docs published in OSS repo (`docs/`)  
-- [ ] Set Google Doc sharing: Anyone with the link → Viewer (if submitting Google Doc copy)  
-- [ ] Email: grants@chaingpt.org with links below
