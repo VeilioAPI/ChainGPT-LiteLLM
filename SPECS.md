@@ -5,7 +5,9 @@
 **Statut :** initialisation (v0)  
 **Licence :** Apache-2.0  
 **Client de référence :** Veilio Exposure (Deep scan + enrichment de rapports)  
-**Dernière mise à jour :** 2026-08-27
+**Dernière mise à jour :** 2026-08-28
+
+> **Implémentation :** voir [docs/SPEC-TECH-DECOUPAGE-V0.md](./docs/SPEC-TECH-DECOUPAGE-V0.md) pour le découpage features, l’état du scaffold et le plan Jour 1.
 
 ---
 

@@ -1,0 +1,7 @@
+{
+  "status": true,
+  "message": "Chat response generated successfully.",
+  "data": {
+    "bot": "A reentrancy guard prevents reentrant calls to a function."
+  }
+}

@@ -1,16 +1,33 @@
 import assert from "node:assert/strict";
+import { readFileSync } from "node:fs";
 import { describe, it } from "node:test";
-import { parseChainGptBody } from "../src/chaingpt/client.ts";
+import { fileURLToPath } from "node:url";
+import { dirname, join } from "node:path";
+import {
+  ChainGptApiError,
+  parseChainGptBody,
+} from "../src/chaingpt/parse-response.ts";
+
+const fixtures = join(dirname(fileURLToPath(import.meta.url)), "fixtures/chaingpt");
 
 describe("parseChainGptBody", () => {
-  it("extracts bot field from JSON", () => {
-    assert.equal(parseChainGptBody('{"bot":"hello"}'), "hello");
+  it("extracts data.bot from documented buffered JSON", () => {
+    const raw = readFileSync(join(fixtures, "buffered-success.json"), "utf8");
+    assert.equal(
+      parseChainGptBody(raw),
+      "A reentrancy guard prevents reentrant calls to a function.",
+    );
+  });
+
+  it("throws on status:false buffered JSON", () => {
+    const raw = readFileSync(join(fixtures, "buffered-error.json"), "utf8");
+    assert.throws(() => parseChainGptBody(raw), ChainGptApiError);
   });
 
   it("concatenates SSE data payloads", () => {
     const body = [
-      'data: {"bot":"Hel"}',
-      'data: {"bot":"lo"}',
+      'data: {"data":{"bot":"Hel"}}',
+      'data: {"data":{"bot":"lo"}}',
       "data: [DONE]",
     ].join("\n");
     assert.equal(parseChainGptBody(body), "Hello");
