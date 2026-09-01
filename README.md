@@ -8,9 +8,9 @@ Point any OpenAI SDK, LiteLLM, or Strix-style agent at this sidecar and burn **C
 Your app  →  POST /v1/chat/completions  →  ChainGPT-LiteLLM  →  api.chaingpt.org/chat/stream
 ```
 
-**Status:** scaffold / v0 in progress  
+**Status:** v0.2 — chat bridge (validated with mocked upstream; live canary with grant credits)  
 **License:** Apache-2.0  
-**Specs:** [SPECS.md](./SPECS.md) (functional + technical)
+**Specs:** [SPECS.md](./SPECS.md) · [Découpage v0](./docs/SPEC-TECH-DECOUPAGE-V0.md) · [Upstream spike](./docs/upstream-spike.md)
 
 ## Why
 
@@ -21,9 +21,10 @@ ChainGPT’s public chat API uses `question` + `/chat/stream`. Most agents expec
 ## Quick start
 
 ```bash
-cp .env.example .env   # set CHAINGPT_API_KEY
+cp .env.example .env.local   # set CHAINGPT_API_KEY (grant credits)
 npm install
-npm run dev            # http://127.0.0.1:8787
+npm run dev                  # http://127.0.0.1:8787
+npm run test:live            # E2E with real key (starts proxy + curl)
 ```
 
 ```bash
@@ -62,7 +63,7 @@ export LLM_API_BASE=http://127.0.0.1:8787/v1
 
 | Method | Path | Notes |
 |--------|------|--------|
-| GET | `/health` | Liveness |
+| GET | `/health` | Liveness (`?probe=1` pings upstream) |
 | GET | `/v1/models` | Lists `general_assistant` |
 | POST | `/v1/chat/completions` | OpenAI-shaped bridge |
 
